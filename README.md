@@ -1,6 +1,15 @@
-# Aceternity + Sanity CMS Automation Package
+# Aceternity + Sanity CMS Automation
 
-Auto-integrate Aceternity UI Pro components with Sanity CMS in 2-5 minutes instead of 30+ minutes manually.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+[![Sanity](https://img.shields.io/badge/Sanity-v3-red.svg)](https://www.sanity.io/)
+[![Next.js](https://img.shields.io/badge/Next.js-14+-black.svg)](https://nextjs.org/)
+
+Auto-integrate [Aceternity UI Pro](https://pro.aceternity.com) components with Sanity CMS in **2-5 minutes** instead of 30+ minutes manually.
+
+**Time Savings**: 86% reduction in integration time ⚡
+
+[Quick Start](#quick-install) • [Documentation](#documentation) • [Examples](#examples) • [Contributing](#support)
 
 ## Quick Install
 
