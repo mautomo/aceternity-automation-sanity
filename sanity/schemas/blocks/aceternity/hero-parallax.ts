@@ -1,11 +1,11 @@
 import { defineField, defineType } from "sanity";
-import { Clock } from "lucide-react";
+import { Layout } from "lucide-react";
 
 export default defineType({
-  name: "aceternity.timeline",
-  title: "Timeline",
+  name: "aceternity.hero-parallax",
+  title: "Hero Parallax",
   type: "object",
-  icon: Clock,
+  icon: Layout,
   groups: [
     { name: "content", title: "Content", default: true },
     { name: "style", title: "Style" },
@@ -13,20 +13,21 @@ export default defineType({
   fields: [
     defineField({
       name: "title",
-      title: "Timeline Title",
+      title: "Hero Title",
       type: "string",
       validation: (Rule) => Rule.required(),
       group: "content",
     }),
     defineField({
       name: "subtitle",
-      title: "Timeline Subtitle",
+      title: "Hero Subtitle",
       type: "text",
+      validation: (Rule) => Rule.required(),
       group: "content",
     }),
     defineField({
-      name: "items",
-      title: "Timeline Entries",
+      name: "products",
+      title: "Product Cards",
       type: "array",
       of: [
         {
@@ -34,26 +35,33 @@ export default defineType({
           fields: [
             {
               name: "title",
-              title: "Entry Title",
+              title: "Product Title",
               type: "string",
               validation: (Rule) => Rule.required(),
             },
             {
-              name: "content",
-              title: "Entry Content",
-              type: "block-content",
+              name: "link",
+              title: "Product Link",
+              type: "url",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "thumbnail",
+              title: "Thumbnail Image",
+              type: "image",
               validation: (Rule) => Rule.required(),
             },
           ],
           preview: {
-            select: { title: "title" },
-            prepare({ title }) {
-              return { title };
+            select: { title: "title", media: "thumbnail" },
+            prepare({ title, media }) {
+              return { title, media };
             },
           },
         },
       ],
-      validation: (Rule) => Rule.required().min(2),
+      validation: (Rule) => Rule.required().min(15).max(15),
+      description: "Requires exactly 15 products for optimal display",
       group: "content",
     }),
     defineField({
@@ -71,12 +79,12 @@ export default defineType({
     }),
   ],
   preview: {
-    select: { title: "title", items: "items" },
-    prepare({ title, items }) {
+    select: { title: "title", products: "products" },
+    prepare({ title, products }) {
       return {
-        title: title || "Timeline",
-        subtitle: items ? `${items.length} entries` : "Timeline Component",
-        media: Clock,
+        title: title || "Hero Parallax",
+        subtitle: products ? `${products.length} products` : "Parallax Hero",
+        media: Layout,
       };
     },
   },

@@ -22,21 +22,21 @@ import {
 
 // Icon mapping for Lucide icons
 const iconMap: Record<string, React.ReactNode> = {
-  workflow: <Workflow className="h-6 w-6 text-neutral-500" />,
-  "shield-check": <ShieldCheck className="h-6 w-6 text-neutral-500" />,
-  "message-square": <MessageSquare className="h-6 w-6 text-neutral-500" />,
-  zap: <Zap className="h-6 w-6 text-neutral-500" />,
-  "file-check": <FileCheck className="h-6 w-6 text-neutral-500" />,
-  package: <Package className="h-6 w-6 text-neutral-500" />,
-  database: <Database className="h-6 w-6 text-neutral-500" />,
-  brain: <Brain className="h-6 w-6 text-neutral-500" />,
-  "trending-up": <TrendingUp className="h-6 w-6 text-neutral-500" />,
-  headphones: <Headphones className="h-6 w-6 text-neutral-500" />,
-  cloud: <Cloud className="h-6 w-6 text-neutral-500" />,
-  building: <Building className="h-6 w-6 text-neutral-500" />,
-  rocket: <Rocket className="h-6 w-6 text-neutral-500" />,
-  cpu: <Cpu className="h-6 w-6 text-neutral-500" />,
-  shield: <Shield className="h-6 w-6 text-neutral-500" />,
+  workflow: <Workflow className="h-6 w-6 text-muted-foreground" />,
+  "shield-check": <ShieldCheck className="h-6 w-6 text-muted-foreground" />,
+  "message-square": <MessageSquare className="h-6 w-6 text-muted-foreground" />,
+  zap: <Zap className="h-6 w-6 text-muted-foreground" />,
+  "file-check": <FileCheck className="h-6 w-6 text-muted-foreground" />,
+  package: <Package className="h-6 w-6 text-muted-foreground" />,
+  database: <Database className="h-6 w-6 text-muted-foreground" />,
+  brain: <Brain className="h-6 w-6 text-muted-foreground" />,
+  "trending-up": <TrendingUp className="h-6 w-6 text-muted-foreground" />,
+  headphones: <Headphones className="h-6 w-6 text-muted-foreground" />,
+  cloud: <Cloud className="h-6 w-6 text-muted-foreground" />,
+  building: <Building className="h-6 w-6 text-muted-foreground" />,
+  rocket: <Rocket className="h-6 w-6 text-muted-foreground" />,
+  cpu: <Cpu className="h-6 w-6 text-muted-foreground" />,
+  shield: <Shield className="h-6 w-6 text-muted-foreground" />,
 };
 
 type BentoGridItem = {
@@ -76,7 +76,7 @@ export default function BentoGridBlock({
     <SectionContainer color={colorVariant as any} padding={padding as any}>
       <div className="container max-w-7xl">
         {title && (
-          <h2 className="text-3xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-10 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-10 text-center">
             {title}
           </h2>
         )}

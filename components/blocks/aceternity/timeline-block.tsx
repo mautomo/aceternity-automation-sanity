@@ -43,7 +43,7 @@ export default function TimelineBlock({
   }));
 
   return (
-    <div className="relative w-full bg-white dark:bg-neutral-950">
+    <SectionContainer color={colorVariant as any} padding={padding as any}>
       <div className="container px-4">
         {(title || subtitle) && (
           <div className="max-w-7xl mx-auto py-20">
@@ -61,6 +61,6 @@ export default function TimelineBlock({
         )}
         <Timeline data={timelineEntries} />
       </div>
-    </div>
+    </SectionContainer>
   );
 }

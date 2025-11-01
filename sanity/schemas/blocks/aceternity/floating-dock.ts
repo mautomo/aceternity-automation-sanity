@@ -1,11 +1,11 @@
 import { defineField, defineType } from "sanity";
-import { Clock } from "lucide-react";
+import { Dock } from "lucide-react";
 
 export default defineType({
-  name: "aceternity.timeline",
-  title: "Timeline",
+  name: "aceternity.floating-dock",
+  title: "Floating Dock",
   type: "object",
-  icon: Clock,
+  icon: Dock,
   groups: [
     { name: "content", title: "Content", default: true },
     { name: "style", title: "Style" },
@@ -13,20 +13,14 @@ export default defineType({
   fields: [
     defineField({
       name: "title",
-      title: "Timeline Title",
+      title: "Internal Title",
       type: "string",
-      validation: (Rule) => Rule.required(),
-      group: "content",
-    }),
-    defineField({
-      name: "subtitle",
-      title: "Timeline Subtitle",
-      type: "text",
+      description: "For organization only",
       group: "content",
     }),
     defineField({
       name: "items",
-      title: "Timeline Entries",
+      title: "Dock Items",
       type: "array",
       of: [
         {
@@ -34,26 +28,33 @@ export default defineType({
           fields: [
             {
               name: "title",
-              title: "Entry Title",
+              title: "Title",
               type: "string",
               validation: (Rule) => Rule.required(),
             },
             {
-              name: "content",
-              title: "Entry Content",
-              type: "block-content",
+              name: "href",
+              title: "Link",
+              type: "url",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "icon",
+              title: "Icon Name",
+              type: "string",
+              description: "Lucide icon name (e.g., 'Home', 'User', 'Mail')",
               validation: (Rule) => Rule.required(),
             },
           ],
           preview: {
-            select: { title: "title" },
-            prepare({ title }) {
-              return { title };
+            select: { title: "title", href: "href" },
+            prepare({ title, href }) {
+              return { title, subtitle: href };
             },
           },
         },
       ],
-      validation: (Rule) => Rule.required().min(2),
+      validation: (Rule) => Rule.required().min(3).max(8),
       group: "content",
     }),
     defineField({
@@ -74,9 +75,9 @@ export default defineType({
     select: { title: "title", items: "items" },
     prepare({ title, items }) {
       return {
-        title: title || "Timeline",
-        subtitle: items ? `${items.length} entries` : "Timeline Component",
-        media: Clock,
+        title: title || "Floating Dock",
+        subtitle: items ? `${items.length} items` : "Navigation",
+        media: Dock,
       };
     },
   },

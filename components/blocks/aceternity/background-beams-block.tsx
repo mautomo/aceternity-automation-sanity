@@ -27,10 +27,12 @@ export default function BackgroundBeamsBlock({
     );
   }
 
-  // Standalone section mode
+  // Standalone section mode - use Schema UI SectionContainer pattern
   return (
-    <div className="relative w-full bg-gradient-to-b from-neutral-950 via-neutral-900 to-black" style={{ minHeight: height }}>
-      <BackgroundBeams className="absolute inset-0" />
-    </div>
+    <SectionContainer color={colorVariant as any} padding={padding as any}>
+      <div className="relative w-full" style={{ minHeight: height }}>
+        <BackgroundBeams className="absolute inset-0" />
+      </div>
+    </SectionContainer>
   );
 }
