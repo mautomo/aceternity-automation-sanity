@@ -1,21 +1,67 @@
-# Dependencies
-node_modules/
-.pnp
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
 .pnp.js
+.yarn/install-state.gz
 
-# Testing
-coverage/
+# testing
+/coverage
 
-# Production
-build/
-dist/
+# next.js
+/.next/
+/out/
 
-# Misc
+# production
+/build
+
+# misc
 .DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# YoYo AI version control directory
+.yoyo/
+
+# Sanity
+/dist
+.sanity
+schema.json
+
+# Supabase
+.supabase
+
+# Aceternity automation
+aceternity-logs/
+integration-reports/
+
+# Generated files
+uploaded-logos-manifest.json
 *.log
 
-# IDEs
-.vscode/
+# IDE
+.vscode/settings.json
 .idea/
 *.swp
 *.swo
+*~
+
+# OS
+Thumbs.db
+.Spotlight-V100
+.Trashes

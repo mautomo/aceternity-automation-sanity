@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Vconic
+Copyright (c) 2025 Vconic / Aceternity Automation Sanity Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,43 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This project includes components from:
+
+### Aceternity UI
+- Website: https://ui.aceternity.com
+- License: Aceternity UI Pro License (separate purchase required)
+- Note: Aceternity components are NOT included in this MIT license
+
+### shadcn/ui
+- Repository: https://github.com/shadcn/ui
+- License: MIT License
+- Copyright (c) 2023 shadcn
+
+### Sanity
+- Website: https://www.sanity.io
+- License: MIT License
+- Copyright (c) Sanity.io
+
+### Next.js
+- Repository: https://github.com/vercel/next.js
+- License: MIT License
+- Copyright (c) 2023 Vercel, Inc.
+
+---
+
+## Important Notes
+
+1. **Aceternity Components**: The Aceternity UI components integrated in this project require a separate license from https://ui.aceternity.com. The automation package itself is MIT licensed, but the Aceternity components themselves are NOT.
+
+2. **Commercial Use**: While this automation package is free to use commercially under the MIT license, you must obtain appropriate licenses for any premium component libraries you integrate (Aceternity Pro, ShadcnBlocks Pro, etc.).
+
+3. **Attribution**: While not required by the MIT license, attribution is appreciated when using this project.
+
+---
+
+For questions about licensing, please open an issue on GitHub or contact the maintainers.
